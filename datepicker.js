@@ -27,6 +27,7 @@ class DatePicker extends Component {
     super(props);
 
     this.state = {
+      date_func: this.getDate.bind(this),
       date: this.getDate(),
       modalVisible: false,
       animatedHeight: new Animated.Value(0),
@@ -50,7 +51,7 @@ class DatePicker extends Component {
   static getDerivedStateFromProps(props, state) {
     if (props.date !== state.date) {
       return {
-        date: state.date.getDate(props.date)
+        date: state.date_func.getDate(props.date)
       };
     }
   }
