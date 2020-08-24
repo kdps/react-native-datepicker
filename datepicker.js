@@ -50,7 +50,8 @@ class DatePicker extends Component {
   static getDerivedStateFromProps(props, state) {
     if (props.date !== state.date) {
       return {
-        date: this.getDate(props.date)
+        // https://stackoverflow.com/questions/49664867/calling-a-method-inside-getderivedstatefromprops-in-react
+        date: getDate(props.date)
       };
     }
   }
