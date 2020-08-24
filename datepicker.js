@@ -50,7 +50,7 @@ class DatePicker extends Component {
   static getDerivedStateFromProps(props, state) {
     if (props.date !== state.date) {
       return {
-        date: this.getDate(nextProps.date)
+        date: this.getDate(props.date)
       };
     }
   }
