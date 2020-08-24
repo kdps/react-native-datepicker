@@ -54,6 +54,8 @@ class DatePicker extends Component {
         date: state.date_func(props.date)
       };
     }
+    
+    return null;
   }
 
   setModalVisible(visible) {
